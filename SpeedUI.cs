@@ -1,15 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using TMPro;
 using System;
-using UnityEngine.UI;
+using TMPro;
+using UnityEngine;
 namespace SF
 {
     public class SpeedUI : MonoBehaviour
     {
         public TextMeshProUGUI tmp;
         public Rigidbody rb;
+        public Movement movement;
 
         void Start()
         {
@@ -19,7 +17,8 @@ namespace SF
 
         void Update()
         {
-            tmp.text = "Speed: " + Convert.ToString(Convert.ToInt32(rb.velocity.magnitude));
+            //tmp.text = "Speed: " + Convert.ToString(Convert.ToInt32(rb.velocity.magnitude));
+            tmp.text = "Speed: " + Convert.ToString(Convert.ToInt32(movement.rb.velocity.magnitude));
         }
     }
 }
